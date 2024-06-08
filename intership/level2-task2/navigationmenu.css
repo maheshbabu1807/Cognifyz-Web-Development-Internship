@@ -1,0 +1,58 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Mobile Navigation */
+  .mobile-nav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Menu Items */
+  .menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block;
+  }
+  
+  /* Make menu items vertical and hide them by default on small screens */
+  @media (max-width: 600px) {
+    .hamburger-toggle {
+      display: none; /* Hide Checkbox */
+    }
+    
+    .hamburger-icon {
+      display: block; /* Show Hamburger Icon */
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    /* Show menu when hamburger is clicked */
+    .hamburger-toggle:checked + .hamburger-icon + .menu {
+      display: flex;
+    }
+  }
